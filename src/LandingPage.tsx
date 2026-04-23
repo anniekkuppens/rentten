@@ -1,7 +1,6 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import './LandingPage.css'
 import heroImage from './assets/hero-image-rentten.png'
-import growthMockupImage from './assets/mockup.png'
 import step1Illustration from './assets/Step1Illustration.svg'
 import step2Illustration from './assets/Step2Illustration.svg'
 import step3Illustration from './assets/Step3Illustration.svg'
@@ -29,7 +28,8 @@ const waitlistAvatarLana = 'https://www.figma.com/api/mcp/asset/47535298-a473-40
 const waitlistAvatarDemi = 'https://www.figma.com/api/mcp/asset/96dd3cb0-80d1-4526-960d-017e6247f026'
 const waitlistAvatarCandice = 'https://www.figma.com/api/mcp/asset/ff21eeed-fb43-43e2-94e5-04ec316778f6'
 
-const contactFeaturedIconBg = 'https://www.figma.com/api/mcp/asset/da5b0ef0-17ca-44d0-903d-b8caf890527a'
+const growthSectionMockup = 'https://www.figma.com/api/mcp/asset/3e658e06-4710-4a0f-b26a-895591871433'
+
 
 
 const faqItems = [
@@ -463,27 +463,25 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="lp-section lp-growth">
-      <div className="lp-wrap center-title reveal-on-scroll">
-          <p className="eyebrow">Kaip</p>
+      <section className="lp-section lp-growth" data-node-id="550:5605">
+        <div className="lp-wrap center-title reveal-on-scroll lp-growth-heading">
+          <p className="eyebrow">Kaip plėsis RENTTEN?</p>
           <h2>Kaip plėsis RENTTEN?</h2>
           <p className="section-lead">Ateityje RENTTEN planuoja papildyti platformą funkcijomis:</p>
         </div>
-        
-        <div className="lp-growth-layout">
-          <div className="lp-wrap lp-growth-list-wrap">
-            <div className="lp-growth-list reveal-on-scroll">
-              <ul>
-                <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Nuomos istorija</li>
-                <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Ankstesnių nuomotojų atsiliepimai</li>
-                <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Elgesio signalai (tvarkingumas, konfliktai, turto priežiūra)</li>
-                <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Informacija apie įsiskolinimus</li>
-                <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Rekomendacijos nuomos sutarčių sąlygoms</li>
-              </ul>
-            </div>
+
+        <div className="lp-wrap lp-growth-layout">
+          <div className="lp-growth-list-wrap reveal-on-scroll">
+            <ul className="lp-growth-list">
+              <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Nuomos istorija</li>
+              <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Ankstesnių nuomotojų atsiliepimai</li>
+              <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Elgesio signalai (tvarkingumas, konfliktai, turto priežiūra)</li>
+              <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Informacija apie įsiskolinimus</li>
+              <li><img src={audienceCheckIcon} alt="" aria-hidden="true" />Rekomendacijos nuomos sutarčių sąlygoms</li>
+            </ul>
           </div>
           <div className="lp-growth-mockup reveal-on-scroll" style={{ '--reveal-delay': '100ms' } as CSSProperties}>
-            <img src={growthMockupImage} alt="Rentten platform mockup" />
+            <img src={growthSectionMockup} alt="Rentten dashboard preview" />
           </div>
         </div>
       </section>
@@ -617,10 +615,8 @@ export default function LandingPage() {
             </div>
             <div className="lp-contact-card">
               <div className="lp-contact-featured" aria-hidden="true">
-                <img className="lp-contact-featured-bg" src={contactFeaturedIconBg} alt="" />
-                <div className="lp-contact-featured-inner">
-                  <img src={contactIconPhone} alt="" />
-                </div>
+                <img className="lp-contact-featured-bg" src={contactIconPhone} alt="" />
+               
               </div>
               <p className="lp-contact-card-label">Phone</p>
               <a className="lp-contact-card-link" href="tel:+37060000000">

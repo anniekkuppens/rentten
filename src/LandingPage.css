@@ -765,12 +765,12 @@ p.lead span{
 
 }
 
-.lp-section.lp-growth{
-padding-bottom:0px;
-
+.lp-section.lp-growth {
+  padding: 96px 0;
+  background: #ffffff;
 }
 
-.lp-growth, .lp-faq {
+.lp-faq {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -881,35 +881,31 @@ a.lp-contact-card-link:hover {
   text-decoration: underline;
 }
 
-.lp-growth-header {
-  max-width: 768px;
-  text-align: center;
+.lp-growth-heading .eyebrow {
+  margin: 0 0 12px;
 }
 
-.lp-growth-header h2 {
-  margin: 4px 0 0;
-  font-size: 48px;
+.lp-growth-heading h2 {
+  margin-bottom: 0;
 }
 
 .lp-growth-layout {
-  margin: 64px auto 0;
-  width: min(1280px, calc(100% - 64px));
+  margin-top: 64px;
+  width: min(1280px, calc(100% - 32px));
+
   display: grid;
-  grid-template-columns: 1fr minmax(320px, 50vw);
+  grid-template-columns: minmax(320px, 1fr) minmax(420px, 1fr);
   align-items: center;
   gap: 64px;
 }
 
 .lp-growth-list-wrap {
-  width: 100%;
-  margin: 0;
-  padding-left: 88px;
+  padding-left: 16px;
 }
 
-
-.lp-growth-list ul {
+.lp-growth-list {
   margin: 0;
-  padding: 0 0 0 16px;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -929,22 +925,27 @@ a.lp-contact-card-link:hover {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
+  background: #f9f5ff;
+  border-radius: 999px;
 }
 
 .lp-growth-mockup {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 27px 0px 0px 0px;
-  padding: 6px;
+  border-radius: 27px;
+  padding: 3.5px;
+  background: #ffffff;
   box-shadow: 0 10px 13px rgba(10, 13, 18, 0.08), 0 3px 5px rgba(10, 13, 18, 0.03), 0 1px 2px rgba(10, 13, 18, 0.04);
   overflow: hidden;
   justify-self: end;
-  width: min(100%, 620px);
+  width: min(100%, 700px);
 }
 
 .lp-growth-mockup img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 22px;
   display: block;
+  border: 1.7px solid #e9eaeb;
+  background: #fafafa;
 }
 
 .faq {
@@ -1264,8 +1265,15 @@ a.lp-footer-link {
   }
 
   .lp-growth-layout {
+    width: min(1280px, calc(100% - 64px));
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .lp-growth-list-wrap {
+    padding-left: 0;
   }
 
   .lp-hero-image {
@@ -1342,7 +1350,7 @@ a.lp-footer-link {
   .lp-hero h1,
   .center-title h2,
   .lp-audience-content h3,
-  .lp-growth-header h2,
+  .lp-growth-heading h2,
   .cta-grid h3 {
     font-size: 34px;
   }
