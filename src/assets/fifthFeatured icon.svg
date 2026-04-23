@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_640_6866" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<rect width="48" height="48" fill="url(#paint0_linear_640_6866)"/>
+</mask>
+<g mask="url(#mask0_640_6866)">
+<circle cx="24" cy="24" r="23.5" fill="#F9F5FF" stroke="#E9D7FE"/>
+</g>
+<rect x="8" y="8" width="32" height="32" rx="16" fill="#0148D4"/>
+<path d="M23.166 23.1667H19.166C18.2326 23.1667 17.7659 23.1667 17.4094 23.3483C17.0958 23.5081 16.8408 23.7631 16.681 24.0767C16.4993 24.4332 16.4993 24.8999 16.4993 25.8333V31.5M31.4993 31.5V19.1667C31.4993 18.2332 31.4993 17.7665 31.3177 17.41C31.1579 17.0964 30.9029 16.8414 30.5893 16.6817C30.2328 16.5 29.7661 16.5 28.8327 16.5H25.8327C24.8993 16.5 24.4326 16.5 24.076 16.6817C23.7624 16.8414 23.5075 17.0964 23.3477 17.41C23.166 17.7665 23.166 18.2332 23.166 19.1667V31.5M32.3327 31.5H15.666M26.0827 19.8333H28.5827M26.0827 23.1667H28.5827M26.0827 26.5H28.5827" stroke="white" stroke-width="1.336" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_640_6866" x1="24" y1="0" x2="24" y2="48" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
