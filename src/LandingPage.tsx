@@ -165,7 +165,7 @@ export default function LandingPage() {
           </button>
           <nav className="lp-nav-links">
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('apie')}>Apie</button>
-            <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kam-skirta')}>Kam Skirta</button>
+            <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kam-skirta')}>Kam skirta</button>
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kaip-veikia')}>Kaip veikia</button>
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('duk')}>DUK</button>
           </nav>
@@ -190,7 +190,7 @@ export default function LandingPage() {
         </div>
         <nav id="mobile-nav-menu" className={`lp-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('apie')}>Apie</button>
-          <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kam-skirta')}>Kam Skirta</button>
+          <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kam-skirta')}>Kam skirta</button>
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kaip-veikia')}>Kaip veikia</button>
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('duk')}>DUK</button>
         </nav>
