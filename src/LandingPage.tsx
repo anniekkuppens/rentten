@@ -307,16 +307,16 @@ export default function LandingPage() {
               </span>
             </div>
             <div className="lp-apie-column-content">
-              <h3>COMMON PROBLEMS</h3>
+              <h3>PROBLEMA</h3>
               <ul>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '0ms' } as CSSProperties}>
-                  Lack of reliable information about the tenant
+                Trūksta patikimos informacijos apie nuomininką 
                 </li>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '440ms' } as CSSProperties}>
-                  Decisions based on intuition
+                Sprendimai remiasi intuicija 
                 </li>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '880ms' } as CSSProperties}>
-                  More risk and conflict
+                Daugiau rizikos ir konfliktų t
                 </li>
               </ul>
             </div>
@@ -337,16 +337,16 @@ export default function LandingPage() {
               </span>
             </div>
             <div className="lp-apie-column-content">
-              <h3>RENTTEN SOLUTION</h3>
+              <h3>RENTTEN SPRENDIMAS</h3>
               <ul>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '220ms' } as CSSProperties}>
-                  Combines trust signals
+                Sujungia patikimumo signalus 
                 </li>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '660ms' } as CSSProperties}>
-                  Provides a <strong>clear</strong> assessment
+                Pateikia aiškų įvertinimą 
                 </li>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '1100ms' } as CSSProperties}>
-                  Allows decision making before the contract
+                Leidžia priimti sprendimą prieš sutartį 
                 </li>
               </ul>
             </div>
