@@ -914,7 +914,7 @@ p.lead span{
   line-height: 24px;
 }
 
-.lp-how {
+.lp-how, .lp-contact {
   background-color:rgb(239, 243, 248, 0.6);
 
 
@@ -932,7 +932,6 @@ p.lead span{
 
 .lp-section.lp-contact {
   padding: 96px 0;
-  background: #f8faff;
 }
 
 .lp-contact-inner {
