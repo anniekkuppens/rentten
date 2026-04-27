@@ -20,7 +20,7 @@ import logoImage from './assets/logo-rentten.svg'
 import contactIconMail from './assets/emailIcon.svg'
 import contactIconLocation from './assets/locationIcon.svg'
 import contactIconPhone  from './assets/callIcon.svg'
-import phoneFeaturesImg from './assets/phoneFeaturesImg.svg'
+import phoneFeaturesImg from './assets/features-image-centered.svg'
 
 const waitlistAvatarOlivia = 'https://www.figma.com/api/mcp/asset/851fc04f-27ab-47d1-a1a2-f5c6d1736ce5'
 const waitlistAvatarPhoenix = 'https://www.figma.com/api/mcp/asset/8004b4a9-e753-4060-813c-856e4c496ca1'
@@ -29,6 +29,10 @@ const waitlistAvatarDemi = 'https://www.figma.com/api/mcp/asset/96dd3cb0-80d1-45
 const waitlistAvatarCandice = 'https://www.figma.com/api/mcp/asset/ff21eeed-fb43-43e2-94e5-04ec316778f6'
 
 const growthSectionMockup = 'https://www.figma.com/api/mcp/asset/3e658e06-4710-4a0f-b26a-895591871433'
+const apieFeatureIconBg = 'https://www.figma.com/api/mcp/asset/09ddad74-a4d6-4928-8363-3242e4e7e6f4'
+const apieAlertTriangleIcon = 'https://www.figma.com/api/mcp/asset/690b1c5c-78a2-454e-928b-6117ceb91f37'
+const apieLightbulbIcon = 'https://www.figma.com/api/mcp/asset/ea66a2ab-2301-49e1-bdd5-76731cddec0a'
+const apieArrowRightIcon = 'https://www.figma.com/api/mcp/asset/7f42817c-49af-464a-b71d-c1d5e5fefbf6'
 
 
 
@@ -37,9 +41,9 @@ const faqItems = [
   { q: 'Ar platforma bus nemokama?', a: 'Pradiniame etape platformą bus galima išbandyti nemokamai su ribotu užklausų skaičiumi.' },
   { q: 'Ar mano duomenys bus saugūs?', a: 'RENTTEN naudoja tik tuos duomenis, kuriuos nuomininkas pateikia su savo sutikimu. Platforma siekia užtikrinti duomenų saugumą ir privatumo apsaugą viso proceso metu.' },
   { q: 'Kokią informaciją pateikia RENTTEN?', a: 'Platforma pateikia nuomininko įvertinimą, kuriame gali būti matomas patikimumo įvertinimas, finansinio stabilumo signalai ir kiti patikimumo indikatoriai. Nuomotojas ar brokeris taip pat gali matyti tapatybės patvirtinimą, elgesio signalus ir ankstesnio nuomotojo kontaktus, jeigu jie yra.' },
-  { q: 'Ar nuomininkas turi duoti sutikimą?', a: 'Taip. Duomenys pateikiami tik nuomininkui davus sutikimą.' },
+  { q: 'Ar nuomininkas turi duoti sutikimą?', a: 'Duomenys pateikiami tik nuomininkui davus sutikimą.' },
   { q: 'Kiek laiko užtrunka gauti nuomininko patikimumo įvertinimą?', a: 'Dažniausiai procesas užtrunka vos kelias minutes nuo momento, kai nuomininkas pateikia reikalingą informaciją.' },
-  { q: 'Ar RENTTEN priima sprendimą už nuomotoją?', a: 'Ne. RENTTEN pateikia patikimumo signalus ir kontekstą, kuris padeda nuomotojui priimti geriau informuotą sprendimą.' },
+  { q: 'Ar RENTTEN priima sprendimą už nuomotoją?', a: 'Ne. RENTTEN pateikia patikimumo signalus ir kontekstą, kad nuomotojas galėtų priimti informuotą sprendimą.' },
 
 ]
 
@@ -102,7 +106,7 @@ export default function LandingPage() {
     return () => observer.disconnect()
   }, [])
 
-  const submitEmail = (email: string, source: 'hero' | 'cta') => {
+  const submitEmail = async (email: string, source: 'hero' | 'cta') => {
     const normalizedEmail = email.trim().toLowerCase()
 
     if (!isValidEmail(normalizedEmail)) {
@@ -112,14 +116,35 @@ export default function LandingPage() {
 
     setSubmitMessage(null)
 
-    if (source === 'hero') {
-      setHeroEmail('')
-    } else {
-      setCtaEmail('')
-    }
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: normalizedEmail }),
+      })
 
-    setSubmitMessage({ type: 'success', text: 'Ačiū! Jūsų el. paštas sėkmingai išsaugotas.' })
-}
+      const payload = (await response.json()) as { error?: string }
+      if (!response.ok) {
+        const fallbackError = 'Nepavyko išsaugoti el. pašto adreso. Bandykite dar kartą.'
+        const errorText =
+          response.status === 409
+            ? 'Šis el. pašto adresas jau yra užregistruotas.'
+            : payload.error ?? fallbackError
+        setSubmitMessage({ type: 'error', text: errorText })
+        return
+      }
+
+      if (source === 'hero') {
+        setHeroEmail('')
+      } else {
+        setCtaEmail('')
+      }
+
+      setSubmitMessage({ type: 'success', text: 'Ačiū! Jūsų el. paštas sėkmingai išsaugotas.' })
+    } catch {
+      setSubmitMessage({ type: 'error', text: 'Nepavyko prisijungti prie serverio. Bandykite dar kartą.' })
+    }
+  }
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (!section) {
@@ -218,9 +243,9 @@ export default function LandingPage() {
             <p className="sublead">Prisijunk prie laukiančiųjų sąrašo. Būk vienas pirmųjų, kuris galės išbandyti RENTTEN.</p>
             <form
               className="lp-capture"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault()
-                submitEmail(heroEmail, 'hero')
+                await submitEmail(heroEmail, 'hero')
               }}
             >
               <input
@@ -234,7 +259,7 @@ export default function LandingPage() {
                 Rezervuoti vietą
               </button>
             </form>
-            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų < a href="#privacy">privatumo politika.</a></small>
+            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy">privatumo politika.</a></small>
             {submitMessage ? (
               <p className={submitMessage.type === 'success' ? 'lp-form-feedback-success' : 'lp-form-feedback-error'}>
                 {submitMessage.text}
@@ -273,19 +298,59 @@ export default function LandingPage() {
           <h2>Nuo spėjimo prie aiškesnių sprendimų apie nuomininką</h2>
           <p className="section-lead">Nuomos rinka veikia vedima pasitikėjimo. RENTTEN suteikia tam pagrindą.</p>
         </div>
-        <div className="lp-wrap two-col reveal-on-scroll">
-          <p>
-            Nuomojant būstą dažnai tenka spręsti turint labai mažai informacijos apie nuomininką.
-            Nuomotojai ir brokeriai dažnai remiasi intuicija, rekomendacijomis ar pavieniais dokumentais.
-            Tai sukuria daugiau nežinomybės, rizikos ir kartais net konfliktų.
-          </p>
-          <div>
-          <p>
-            <span className="lp-apie-text">RENTTEN sukurtas tam, kad šis procesas būtų aiškesnis.</span>Platforma sujungia
-            skirtingus patikimumo signalus ir pateikia aiškų nuomininko patikimumo įvertinimą prieš
-            sudarant nuomos sutartį.
-          </p>
+        <div className="lp-wrap lp-apie-compare reveal-on-scroll">
+          <article className="lp-apie-column lp-apie-column-problems">
+            <div className="lp-apie-icon-shell">
+              <img className="lp-apie-icon-bg" src={apieFeatureIconBg} alt="" loading="lazy" />
+              <span className="lp-apie-icon-inner lp-apie-icon-inner-alert">
+                <img src={apieAlertTriangleIcon} alt="" loading="lazy" />
+              </span>
+            </div>
+            <div className="lp-apie-column-content">
+              <h3>COMMON PROBLEMS</h3>
+              <ul>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '0ms' } as CSSProperties}>
+                  Lack of reliable information about the tenant
+                </li>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '440ms' } as CSSProperties}>
+                  Decisions based on intuition
+                </li>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '880ms' } as CSSProperties}>
+                  More risk and conflict
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <div className="lp-apie-arrows" aria-hidden="true">
+            <img src={apieArrowRightIcon} alt="" loading="lazy" />
+            <img src={apieArrowRightIcon} alt="" loading="lazy" />
+            <img src={apieArrowRightIcon} alt="" loading="lazy" />
+
           </div>
+
+          <article className="lp-apie-column lp-apie-column-solution">
+            <div className="lp-apie-icon-shell">
+              <img className="lp-apie-icon-bg" src={apieFeatureIconBg} alt="" loading="lazy" />
+              <span className="lp-apie-icon-inner lp-apie-icon-inner-solution">
+                <img src={apieLightbulbIcon} alt="" loading="lazy" />
+              </span>
+            </div>
+            <div className="lp-apie-column-content">
+              <h3>RENTTEN SOLUTION</h3>
+              <ul>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '220ms' } as CSSProperties}>
+                  Combines trust signals
+                </li>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '660ms' } as CSSProperties}>
+                  Provides a <strong>clear</strong> assessment
+                </li>
+                <li className="lp-apie-li-reveal" style={{ '--ap-delay': '1100ms' } as CSSProperties}>
+                  Allows decision making before the contract
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -495,9 +560,9 @@ export default function LandingPage() {
           <div>
             <form
               className="lp-capture"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault()
-                submitEmail(ctaEmail, 'cta')
+                await submitEmail(ctaEmail, 'cta')
               }}
             >
               <input
