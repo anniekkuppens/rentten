@@ -21,19 +21,15 @@ import contactIconMail from './assets/emailIcon.svg'
 import contactIconLocation from './assets/locationIcon.svg'
 import contactIconPhone  from './assets/callIcon.svg'
 import phoneFeaturesImg from './assets/features-image-centered.svg'
-
-const waitlistAvatarOlivia = 'https://www.figma.com/api/mcp/asset/851fc04f-27ab-47d1-a1a2-f5c6d1736ce5'
-const waitlistAvatarPhoenix = 'https://www.figma.com/api/mcp/asset/8004b4a9-e753-4060-813c-856e4c496ca1'
-const waitlistAvatarLana = 'https://www.figma.com/api/mcp/asset/47535298-a473-403a-83a8-a57efe8e3110'
-const waitlistAvatarDemi = 'https://www.figma.com/api/mcp/asset/96dd3cb0-80d1-4526-960d-017e6247f026'
-const waitlistAvatarCandice = 'https://www.figma.com/api/mcp/asset/ff21eeed-fb43-43e2-94e5-04ec316778f6'
-
-const growthSectionMockup = 'https://www.figma.com/api/mcp/asset/3e658e06-4710-4a0f-b26a-895591871433'
-const apieFeatureIconBg = 'https://www.figma.com/api/mcp/asset/09ddad74-a4d6-4928-8363-3242e4e7e6f4'
-const apieAlertTriangleIcon = 'https://www.figma.com/api/mcp/asset/690b1c5c-78a2-454e-928b-6117ceb91f37'
-const apieLightbulbIcon = 'https://www.figma.com/api/mcp/asset/ea66a2ab-2301-49e1-bdd5-76731cddec0a'
-const apieArrowRightIcon = 'https://www.figma.com/api/mcp/asset/7f42817c-49af-464a-b71d-c1d5e5fefbf6'
-
+import apieArrowRightIcon from './assets/arrow.svg'
+import apieProblemIcon from './assets/icon-problem.svg'
+import apieSolutionIcon from './assets/icon-solution.svg'
+import growthSectionMockup from './assets/growth-mockup.svg'
+import waitlistAvatarOlivia from './assets/avatar1.jpeg'
+import waitlistAvatarPhoenix from './assets/avatar2.jpeg'
+import waitlistAvatarLana from './assets/avatar3.jpeg'
+import waitlistAvatarDemi from './assets/avatar4.jpeg'
+import waitlistAvatarCandice from './assets/avatar5.jpeg'
 
 
 const faqItems = [
@@ -169,6 +165,23 @@ export default function LandingPage() {
     })
   }
 
+  const scrollToSignupInput = () => {
+    const signupInput = document.getElementById('hero-signup-input') as HTMLInputElement | null
+    if (!signupInput) {
+      return
+    }
+
+    setIsMobileMenuOpen(false)
+    signupInput.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    })
+
+    window.setTimeout(() => {
+      signupInput.focus()
+    }, 450)
+  }
+
   const toggleFaqItem = (question: string) => {
     setOpenFaqId((current) => (current === question ? null : question))
   }
@@ -195,9 +208,16 @@ export default function LandingPage() {
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('duk')}>DUK</button>
           </nav>
           <div className="lp-nav-actions">
-            <button className="lp-btn lp-btn-ghost">Log in</button>
-            <button type="button" className="lp-btn lp-btn-primary" onClick={() => scrollToSection('rezervuoti')}>
+            <button className="lp-btn lp-btn-ghost lp-btn-temp-hidden">Log in</button>
+            <button
+              type="button"
+              className="lp-btn lp-btn-primary lp-btn-temp-hidden"
+              onClick={() => scrollToSection('rezervuoti')}
+            >
               Registruotis
+            </button>
+            <button type="button" className="lp-btn lp-btn-primary" onClick={scrollToSignupInput}>
+              Sužinok pirmas
             </button>
           </div>
           <button
@@ -240,7 +260,7 @@ export default function LandingPage() {
               <span>RENTTEN</span> leidžia nuomininkams saugiai pasidalinti patikimumo signalais, o
               nuomotojams ir brokeriams - priimti sprendimus remiantis objektyviais duomenimis.
             </p>
-            <p className="sublead">Prisijunk prie laukiančiųjų sąrašo. Būk vienas pirmųjų, kuris galės išbandyti RENTTEN.</p>
+            <p className="sublead">Prisijunk prie laukiančiųjų sąrašo. Sužinok pirmas.</p>
             <form
               className="lp-capture"
               onSubmit={async (event) => {
@@ -249,6 +269,7 @@ export default function LandingPage() {
               }}
             >
               <input
+                id="hero-signup-input"
                 type="email"
                 placeholder="Jūsų el. pašto adresas"
                 value={heroEmail}
@@ -256,7 +277,7 @@ export default function LandingPage() {
                 required
               />
               <button className="lp-btn lp-btn-primary" type="submit">
-                Rezervuoti vietą
+              Rezervuoti vietą
               </button>
             </form>
             <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy">privatumo politika.</a></small>
@@ -280,7 +301,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
-                Over <strong>500+</strong> landlords on waitlist
+                Over <strong>500+</strong> versti į lietuvių kalbą 
               </p>
             </div>
          
@@ -301,10 +322,7 @@ export default function LandingPage() {
         <div className="lp-wrap lp-apie-compare reveal-on-scroll">
           <article className="lp-apie-column lp-apie-column-problems">
             <div className="lp-apie-icon-shell">
-              <img className="lp-apie-icon-bg" src={apieFeatureIconBg} alt="" loading="lazy" />
-              <span className="lp-apie-icon-inner lp-apie-icon-inner-alert">
-                <img src={apieAlertTriangleIcon} alt="" loading="lazy" />
-              </span>
+              <img className="lp-apie-icon-bg" src={apieProblemIcon} alt="" loading="lazy" />
             </div>
             <div className="lp-apie-column-content">
               <h3>PROBLEMA</h3>
@@ -316,7 +334,7 @@ export default function LandingPage() {
                 Sprendimai remiasi intuicija 
                 </li>
                 <li className="lp-apie-li-reveal" style={{ '--ap-delay': '880ms' } as CSSProperties}>
-                Daugiau rizikos ir konfliktų t
+                Daugiau rizikos ir konfliktų
                 </li>
               </ul>
             </div>
@@ -331,10 +349,8 @@ export default function LandingPage() {
 
           <article className="lp-apie-column lp-apie-column-solution">
             <div className="lp-apie-icon-shell">
-              <img className="lp-apie-icon-bg" src={apieFeatureIconBg} alt="" loading="lazy" />
-              <span className="lp-apie-icon-inner lp-apie-icon-inner-solution">
-                <img src={apieLightbulbIcon} alt="" loading="lazy" />
-              </span>
+              <img className="lp-apie-icon-bg" src={apieSolutionIcon} alt="" loading="lazy" />
+        
             </div>
             <div className="lp-apie-column-content">
               <h3>RENTTEN SPRENDIMAS</h3>
@@ -555,7 +571,7 @@ export default function LandingPage() {
         <div className="lp-wrap cta-grid">
           <div>
             <h3>Prisijunk prie laukiančiųjų sąrašo</h3>
-            <p>Būk vienas pirmųjų, kuris galės išbandyti RENTTEN.</p>
+            <p>Sužinok pirmas.</p>
           </div>
           <div>
             <form
@@ -576,7 +592,7 @@ export default function LandingPage() {
                 Rezervuoti vietą
               </button>
             </form>
-            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų privatumo politika.</small>
+            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy">privatumo politika.</a></small>
             {submitMessage ? (
               <p className={submitMessage.type === 'success' ? 'lp-form-feedback-success' : 'lp-form-feedback-error'}>
                 {submitMessage.text}
@@ -597,7 +613,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
-                Over <strong>500+</strong> landlords on waitlist
+              Over 500+ versti į lietuvių kalbą 
               </p>
             </div>
           </div>

@@ -287,6 +287,10 @@ button.lp-nav-link-button{
   background: linear-gradient(90deg, rgba(1, 72, 212, 0.94), rgba(5, 35, 170, 0.94));
 }
 
+.lp-btn-temp-hidden {
+  display: none;
+}
+
 
 
 .lp-hero {
@@ -456,6 +460,10 @@ p.lead span{
   max-width: 768px;
 }
 
+.lp-apie .center-title {
+  max-width: 850px;
+}
+
 .center-title h2 {
   margin: 0;
   font-size: 36px;
@@ -487,6 +495,7 @@ p.lead span{
   line-height: 34px;
   color: #252b37;
 }
+
 
 .lp-apie-compare {
   margin-top: 56px;
@@ -914,6 +923,7 @@ p.lead span{
 .lp-section.lp-growth {
   padding: 96px 0;
   background: #ffffff;
+  padding-bottom:0px;
 }
 
 .lp-faq {
@@ -1075,24 +1085,7 @@ a.lp-contact-card-link:hover {
   border-radius: 999px;
 }
 
-.lp-growth-mockup {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 27px;
-  padding: 3.5px;
-  background: #ffffff;
-  box-shadow: 0 10px 13px rgba(10, 13, 18, 0.08), 0 3px 5px rgba(10, 13, 18, 0.03), 0 1px 2px rgba(10, 13, 18, 0.04);
-  overflow: hidden;
-  justify-self: end;
-  width: min(100%, 700px);
-}
 
-.lp-growth-mockup img {
-  width: 100%;
-  border-radius: 22px;
-  display: block;
-  border: 1.7px solid #e9eaeb;
-  background: #fafafa;
-}
 
 .faq {
   margin-top: 54px;
