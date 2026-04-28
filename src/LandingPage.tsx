@@ -207,6 +207,7 @@ export default function LandingPage() {
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kam-skirta')}>Kam skirta</button>
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kaip-veikia')}>Kaip veikia</button>
             <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('duk')}>DUK</button>
+            <button type="button" className="lp-nav-link-button" onClick={() => scrollToSection('kontaktai')}>Susisiekti</button>
           </nav>
           <div className="lp-nav-actions">
             <button className="lp-btn lp-btn-ghost lp-btn-temp-hidden">Log in</button>
@@ -239,6 +240,7 @@ export default function LandingPage() {
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kam-skirta')}>Kam skirta</button>
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kaip-veikia')}>Kaip veikia</button>
           <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('duk')}>DUK</button>
+          <button type="button" className="lp-mobile-menu-item" onClick={() => scrollToSection('kontaktai')}>Susisiekti</button>
         </nav>
       </header>
       <button
@@ -731,6 +733,9 @@ export default function LandingPage() {
                 </button>
                 <button type="button" className="lp-footer-link" onClick={() => scrollToSection('duk')}>
                   DUK
+                </button>
+                <button type="button" className="lp-footer-link" onClick={() => scrollToSection('kontaktai')}>
+                  Susisiekti
                 </button>
                 <a href="#privacy" className="lp-footer-link">
                   Privatumo politika
