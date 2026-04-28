@@ -302,7 +302,8 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
-                Over <strong>500+</strong> versti į lietuvių kalbą 
+  
+                Daugiau nei <strong>500+</strong> nuomotojų laukiančiųjų sąraše 
               </p>
             </div>
          
