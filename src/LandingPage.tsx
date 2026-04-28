@@ -1,6 +1,6 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import './LandingPage.css'
-import heroImage from './assets/hero-image-rentten.png'
+import heroImage from './assets/hero-image-rentten-lituania.png'
 import step1Illustration from './assets/Step1Illustration.svg'
 import step2Illustration from './assets/Step2Illustration.svg'
 import step3Illustration from './assets/Step3Illustration.svg'
@@ -280,7 +280,7 @@ export default function LandingPage() {
               Rezervuoti vietą
               </button>
             </form>
-            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy">privatumo politika.</a></small>
+            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy" className="lp-link-primary">privatumo politika.</a></small>
             {submitMessage ? (
               <p className={submitMessage.type === 'success' ? 'lp-form-feedback-success' : 'lp-form-feedback-error'}>
                 {submitMessage.text}
@@ -458,7 +458,7 @@ export default function LandingPage() {
         <div className="lp-wrap center-title reveal-on-scroll">
           <p className="eyebrow">Kam skirta</p>
           <h2>Kam skirtas RENTTEN?</h2>
-          <p className="lp-audience-intro">RENTTEN gives both parties what has been missing until now – structured, verified data that allows decisions to be made without guesswork.</p>
+          <p className="lp-audience-intro">RENTTEN padeda nuomotojams ir brokeriams priimti saugesnius, greitesnius ir duomenimis grįstus sprendimus renkantis nuomininką.</p>
         </div>
         <div className="lp-wrap lp-audience-v2">
           <div className="lp-audience-row">
@@ -510,25 +510,25 @@ export default function LandingPage() {
         <div className="lp-wrap steps">
           {[
             [
-              'STEP 1',
+              '1 Žingsnis',
               'Nuomotojas arba brokeris sukuria užklausą',
               'Sukuriama užklausa nuomininkui ir inicijuojamas patikimumo vertinimo procesas platformoje.',
               step1Illustration,
             ],
             [
-              'STEP 2',
+              '2 Žingsnis',
               'Nuomininkas gauna kvietimą',
               'Nuomininkas el. paštu gauna užklausą ir pateikia reikalingą informaciją apie darbą, pajamas, finansinį stabilumą ir patvirtina savo tapatybę.',
               step2Illustration,
             ],
             [
-              'STEP 3',
+              '3 Žingsnis',
               'Sukuriamas patikimumo įvertinimas',
               'Sistema sujungia pateiktus signalus į aiškią patikimumo apžvalgą, kurią lengva peržiūrėti nuomotojui ar brokeriui.',
               step3Illustration,
             ],
             [
-              'STEP 4',
+              '4 Žingsnis',
               'Nuomotojas mato rezultatą',
               'Nuomotojas gauna struktūruotą rezultatą ir gali priimti sprendimą remdamasis duomenimis, o ne vien intuicija.',
               step4Illustration,
@@ -548,7 +548,7 @@ export default function LandingPage() {
         <div className="lp-wrap center-title reveal-on-scroll lp-growth-heading">
           <p className="eyebrow">Kaip plėsis RENTTEN?</p>
           <h2>Kaip plėsis RENTTEN?</h2>
-          <p className="section-lead">Ateityje RENTTEN planuoja papildyti platformą funkcijomis:</p>
+          <p className="section-lead">Ateityje RENTTEN planuoja papildyti platformą funkcijomis</p>
         </div>
 
         <div className="lp-wrap lp-growth-layout">
@@ -592,7 +592,7 @@ export default function LandingPage() {
                 Rezervuoti vietą
               </button>
             </form>
-            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy">privatumo politika.</a></small>
+            <small>Palikdami savo el. paštą, jūs sutinkate su mūsų <a href="#privacy" className="lp-link-light">privatumo politika.</a></small>
             {submitMessage ? (
               <p className={submitMessage.type === 'success' ? 'lp-form-feedback-success' : 'lp-form-feedback-error'}>
                 {submitMessage.text}
@@ -613,7 +613,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
-              Over 500+ versti į lietuvių kalbą 
+              Daugiau nei 500+ nuomotojų laukiančiųjų sąraše
               </p>
             </div>
           </div>
@@ -664,8 +664,8 @@ export default function LandingPage() {
       <section id="kontaktai" className="lp-section lp-contact" aria-labelledby="contact-heading" data-node-id="886:16391">
         <div className="lp-contact-inner">
           <div className="lp-wrap center-title reveal-on-scroll lp-contact-heading">
-            <p className="eyebrow">Contact us</p>
-            <h2 id="contact-heading">Get in touch</h2>
+            <p className="eyebrow">Susisiekite</p>
+            <h2 id="contact-heading">Susisiekite su mumis</h2>
             <p className="lp-contact-lead">Turi klausimų? Parašyk mums</p>
           </div>
           <div className="lp-wrap lp-contact-grid reveal-on-scroll">
@@ -674,7 +674,7 @@ export default function LandingPage() {
                 <img className="lp-contact-featured-bg" src={contactIconMail} alt="" />
             
               </div>
-              <p className="lp-contact-card-label">Email</p>
+              <p className="lp-contact-card-label">El. paštas</p>
               <a className="lp-contact-card-link" href="mailto:info@rentten.com">
                 info@rentten.com
               </a>
@@ -684,14 +684,14 @@ export default function LandingPage() {
                 <img className="lp-contact-featured-bg" src={contactIconLocation} alt="" />
               
               </div>
-              <p className="lp-contact-card-label">Office</p>
+              <p className="lp-contact-card-label">Ofisas</p>
               <a
                 className="lp-contact-card-link"
                 href="https://www.google.com/maps/search/?api=1&query=Gedimino%20pr.%201%2C%20LT-01103%20Vilnius%2C%20Lithuania"
                 target="_blank"
                 rel="noreferrer"
               >
-                Gedimino pr. 1, LT-01103 Vilnius, Lithuania
+                Gedimino pr. 1, LT-01103 Vilnius, Lietuva
               </a>
             </div>
             <div className="lp-contact-card">
@@ -699,7 +699,7 @@ export default function LandingPage() {
                 <img className="lp-contact-featured-bg" src={contactIconPhone} alt="" />
                
               </div>
-              <p className="lp-contact-card-label">Phone</p>
+              <p className="lp-contact-card-label">Telefono nr.</p>
               <a className="lp-contact-card-link" href="tel:+37060000000">
                 +370 600 00000
               </a>

@@ -32,6 +32,27 @@ section[id] {
   color: #101828;
 }
 
+.lp-link-light{
+  color:rgb(255, 255, 255);
+  font-weight:bold;
+  text-decoration:underline;
+
+}
+
+.lp-link-light:hover{
+
+ color:#ffffff;
+
+}
+
+.lp-link-primary{
+  color:#0148D4;
+  text-decoration:underline;
+
+}
+
+
+
 .lp-scroll-indicator {
   position: fixed;
   left: 50%;
@@ -905,6 +926,7 @@ p.lead span{
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
+  text-transform: uppercase;
 }
 
 .step-copy {
@@ -1403,6 +1425,34 @@ a.lp-footer-link {
     grid-template-columns: 1fr;
   }
 
+  .lp-hero h1 {
+  font-size: 45px;
+  line-height:46px;
+    width: 100%; 
+    max-width: 100%;
+  }
+
+  
+  .lead,
+  .sublead{  width:100%; 
+    max-width: 100%;}
+  
+  
+  p.section-lead{
+    font-size: 20px;
+    line-height:30px;
+   font-weight: 400;
+  
+  }
+
+  
+  .lp-capture {
+    width:100%; 
+    max-width: 100%;
+  }
+
+
+
   .lp-growth-layout {
     width: min(1280px, calc(100% - 64px));
     margin-left: auto;
@@ -1480,6 +1530,7 @@ a.lp-footer-link {
   .lp-footer-bar {
     flex-direction: column;
     align-items: flex-start;
+    height: 50px;
   }
 
   .lp-footer-socials {
@@ -1542,4 +1593,24 @@ a.lp-footer-link {
     text-align: center;
     align-items: center;
   }
+
+  .feature-item-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.steps h4 {
+  font-size: 20px;
+
+}
+
+.step-copy {
+  font-size: 18px;
+
+}
+
+.steps::before {
+  height: 0px;
+
+}
 }
