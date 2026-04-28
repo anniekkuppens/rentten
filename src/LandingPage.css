@@ -1121,20 +1121,6 @@ a.lp-contact-card-link:hover {
   border-radius: 999px;
 }
 
-.lp-growth-mockup {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.lp-growth-mockup img {
-  width: 100%;
-  max-width: 620px;
-  height: auto;
-  display: block;
-}
-
-
 
 .faq {
   margin-top: 54px;
@@ -1702,7 +1688,7 @@ a.lp-footer-link {
 .steps {
   gap: 15px;
   margin-top:0px;
-  margin-bottom:0px;0px;
+  margin-bottom:0px;
 
 }
 
