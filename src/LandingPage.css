@@ -341,6 +341,7 @@ letter-spacing: -1.18px;
   margin: 0;
   width: 100%; 
   max-width: 516px;
+  overflow-wrap: anywhere;
 }
 
 .lead,
@@ -388,14 +389,28 @@ p.lead span{
 
 .lp-capture input {
   flex: 1;
+  min-width: 0;
   min-height: 48px;
   border: 1px solid #d5d7da;
   border-radius: 8px;
   padding: 0 14px;
+  background-color: #fff;
+  color: #101828;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .lp-capture input::placeholder {
   font-size: 16px;
+  color: #6c737f;
+}
+
+.lp-capture input:-webkit-autofill,
+.lp-capture input:-webkit-autofill:hover,
+.lp-capture input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #101828;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 .lp-waitlist-social-proof {
@@ -1449,6 +1464,12 @@ a.lp-footer-link {
   .lp-capture {
     width:100%; 
     max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .lp-capture input,
+  .lp-capture .lp-btn {
+    width: 100%;
   }
 
 
@@ -1597,6 +1618,17 @@ a.lp-footer-link {
   .feature-item-text p {
     font-size: 18px;
     line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .lp-wrap {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .lp-hero h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
 }
 
 .steps h4 {
