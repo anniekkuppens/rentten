@@ -1121,6 +1121,19 @@ a.lp-contact-card-link:hover {
   border-radius: 999px;
 }
 
+.lp-growth-mockup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lp-growth-mockup img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+}
+
 
 
 .faq {
@@ -1440,6 +1453,11 @@ a.lp-footer-link {
     grid-template-columns: 1fr;
   }
 
+  .lp-hero-grid{
+    gap:24px;
+  }
+ 
+
   .lp-hero h1 {
   font-size: 45px;
   line-height:46px;
@@ -1447,6 +1465,11 @@ a.lp-footer-link {
     max-width: 100%;
   }
 
+
+.lp-hero-image {
+  width:100%;
+  max-width: 100%;  
+}
   
   .lead,
   .sublead{  width:100%; 
@@ -1484,6 +1507,28 @@ a.lp-footer-link {
 
   .lp-growth-list-wrap {
     padding-left: 0;
+  }
+
+  .lp-growth-list li {
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .lp-growth-list li img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lp-growth-mockup {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lp-growth-mockup img {
+    width: min(100%, 480px);
+    margin: 0 auto;
   }
 
   .lp-hero-image {
@@ -1560,7 +1605,6 @@ a.lp-footer-link {
 
   .lp-hero h1,
   .center-title h2,
-  .lp-audience-content h3,
   .lp-growth-heading h2,
   .cta-grid h3 {
     font-size: 34px;
@@ -1598,15 +1642,12 @@ a.lp-footer-link {
     margin-top: 0;
     transform: rotate(90deg);
     gap: 10px;
-  }
-
-  .lp-apie-column-content h3 {
-    font-size: 24px;
+    display:none;
   }
 
   .lp-apie-column-content li {
-    font-size: 20px;
-    line-height: 1.35;
+    font-size: 18px;
+    line-height: 16px;
   }
 
   .lp-apie-column-problems,
@@ -1619,16 +1660,50 @@ a.lp-footer-link {
     font-size: 18px;
     line-height: 1.5;
 }
+.lp-audience-content h3 {
+  font-size: 27px;
+
+}
+
 
 @media (max-width: 560px) {
-  .lp-wrap {
-    width: min(1280px, calc(100% - 32px));
-  }
-
+ 
   .lp-hero h1 {
     font-size: 30px;
     line-height: 1.2;
   }
+
+  .lp-growth-list {
+    gap: 16px;
+  }
+
+  .lp-growth-list li {
+    font-size: 15px;
+    line-height: 22px;
+    gap: 10px;
+  }
+
+  .lp-growth-mockup img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .lp-waitlist-social-proof {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lp-waitlist-avatars {
+    padding-right: 0;
+  }
+}
+
+.steps {
+  gap: 15px;
+  margin-top:0px;
+  margin-bottom:0px;0px;
+
 }
 
 .steps h4 {
@@ -1645,4 +1720,11 @@ a.lp-footer-link {
   height: 0px;
 
 }
+
+.step-card{
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
 }

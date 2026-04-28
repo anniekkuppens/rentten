@@ -1,6 +1,7 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import './LandingPage.css'
 import heroImage from './assets/hero-image-rentten-lituania.png'
+import heroImageMobile from './assets/hero-image-mobile .png'
 import step1Illustration from './assets/Step1Illustration.svg'
 import step2Illustration from './assets/Step2Illustration.svg'
 import step3Illustration from './assets/Step3Illustration.svg'
@@ -308,7 +309,10 @@ export default function LandingPage() {
 
           </div>
           <div className="lp-hero-image">
-            <img src={heroImage} alt="Rentten hero" />
+            <picture>
+              <source media="(max-width: 1000px)" srcSet={heroImageMobile} />
+              <img src={heroImage} alt="Rentten hero" />
+            </picture>
           </div>
         </div>
       </section>
