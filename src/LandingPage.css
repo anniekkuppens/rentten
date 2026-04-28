@@ -296,16 +296,36 @@ button.lp-nav-link-button{
 .lp-btn-primary {
   background: #0148d4;
   color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 
 .lp-btn-magenta {
   background: #ab1bee;
   color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 
-.lp-btn-primary:hover
- {
-  background: linear-gradient(90deg, rgba(1, 72, 212, 0.94), rgba(5, 35, 170, 0.94));
+.lp-btn-primary::before,
+.lp-btn-magenta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #013fbc 0%, #0136a3 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 280ms ease;
+  z-index: -1;
+}
+
+.lp-btn-primary:hover::before,
+.lp-btn-primary:focus-visible::before,
+.lp-btn-magenta:hover::before,
+.lp-btn-magenta:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .lp-btn-temp-hidden {
