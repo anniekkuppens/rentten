@@ -945,6 +945,10 @@ p.lead span{
   left: -15px;
 }
 
+.steps .step-card:nth-child(3) .step-icon {
+  left: 0;
+}
+
 .steps h4 {
   margin: 0;
   font-size: 18px;
@@ -1223,6 +1227,12 @@ a.lp-contact-card-link:hover {
   background: #0148d4;
   color: #fff;
   padding: 70px 0 60px;
+}
+
+.lp-cta .lp-waitlist-caption {
+
+  font-size: 14px;
+
 }
 
 .lp-admin {
@@ -1508,7 +1518,6 @@ a.lp-footer-link {
     width: min(1280px, calc(100% - 64px));
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: 1fr;
     gap: 24px;
   }
 
@@ -1631,6 +1640,10 @@ a.lp-footer-link {
     order: -1;
   }
 
+  .lp-audience-v2 .lp-audience-row:nth-child(2) .lp-audience-image img {
+    transform: scaleX(-1);
+  }
+
   .feature-list {
     max-width: none;
   }
@@ -1733,5 +1746,11 @@ a.lp-footer-link {
   padding-left:0px;
   padding-right:0px;
 }
+
+.step-icon {
+  margin-bottom: 0px;
+
+}
+
 
 }
