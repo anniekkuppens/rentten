@@ -120,13 +120,14 @@ export default function LandingPage() {
         body: JSON.stringify({ email: normalizedEmail }),
       })
 
-      const payload = (await response.json()) as { error?: string }
+      const payload = (await response.json()) as {
+        success?: boolean
+        alreadySubscribed?: boolean
+        error?: string
+      }
       if (!response.ok) {
         const fallbackError = 'Nepavyko išsaugoti el. pašto adreso. Bandykite dar kartą.'
-        const errorText =
-          response.status === 409
-            ? 'Šis el. pašto adresas jau yra užregistruotas.'
-            : payload.error ?? fallbackError
+        const errorText = payload.error ?? fallbackError
         setSubmitMessage({ type: 'error', text: errorText })
         return
       }
@@ -135,6 +136,11 @@ export default function LandingPage() {
         setHeroEmail('')
       } else {
         setCtaEmail('')
+      }
+
+      if (payload.alreadySubscribed) {
+        setSubmitMessage({ type: 'success', text: 'Šis el. pašto adresas jau yra užregistruotas.' })
+        return
       }
 
       setSubmitMessage({ type: 'success', text: 'Ačiū! Jūsų el. paštas sėkmingai išsaugotas.' })
