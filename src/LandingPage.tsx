@@ -759,12 +759,12 @@ export default function LandingPage() {
           <div className="lp-footer-bar">
             <p className="lp-footer-copy">© 2026 Visos teisės saugomos / Powered by Reiz Studio</p>
             <div className="lp-footer-socials" aria-label="Social media">
-              <a href="https://www.linkedin.com" className="lp-footer-social" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/rentten/" className="lp-footer-social" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M6.94 8.5V19H3.5V8.5h3.44ZM7.17 5.26c0 1-.75 1.76-1.95 1.76h-.02c-1.15 0-1.9-.77-1.9-1.76 0-1 .77-1.76 1.95-1.76s1.9.76 1.92 1.76ZM20.5 12.98V19h-3.44v-5.63c0-1.41-.5-2.37-1.77-2.37-.97 0-1.54.65-1.8 1.28-.1.22-.12.54-.12.86V19H9.93s.05-9.67 0-10.5h3.44v1.49c.46-.7 1.28-1.7 3.12-1.7 2.28 0 4.01 1.48 4.01 4.69Z" />
                 </svg>
               </a>
-              <a href="https://www.facebook.com" className="lp-footer-social" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61589445999423#" className="lp-footer-social" target="_blank" rel="noreferrer" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M13.63 20v-7.3h2.45l.37-2.84h-2.82V8.04c0-.82.23-1.38 1.4-1.38h1.5V4.12c-.26-.03-1.15-.12-2.2-.12-2.18 0-3.67 1.33-3.67 3.77v2.1H8.2v2.84h2.46V20h2.97Z" />
                 </svg>
