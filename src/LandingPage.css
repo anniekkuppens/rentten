@@ -441,35 +441,6 @@ p.lead span{
   margin: 24px 0 10px;
 }
 
-.lp-waitlist-avatars {
-  display: flex;
-  align-items: center;
-  padding-right: 8px;
-}
-
-.lp-waitlist-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 200px;
-  border: 0.75px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 0 0 1.5px #fff;
-  overflow: hidden;
-  position: relative;
-  z-index: calc(10 - var(--avatar-index));
-}
-
-.lp-waitlist-avatar + .lp-waitlist-avatar {
-  margin-left: -8px;
-}
-
-.lp-waitlist-avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 200px;
-  object-fit: cover;
-  display: block;
-}
-
 .lp-waitlist-caption {
   margin: 0;
   color: #4a5565;
@@ -1714,9 +1685,6 @@ a.lp-footer-link {
     gap: 10px;
   }
 
-  .lp-waitlist-avatars {
-    padding-right: 0;
-  }
 }
 
 .steps {

@@ -26,11 +26,6 @@ import apieArrowRightIcon from './assets/arrow.svg'
 import apieProblemIcon from './assets/icon-problem.svg'
 import apieSolutionIcon from './assets/icon-solution.svg'
 import growthSectionMockup from './assets/growth-mockup-lituania.svg'
-import waitlistAvatarOlivia from './assets/avatar1.jpeg'
-import waitlistAvatarPhoenix from './assets/avatar2.jpeg'
-import waitlistAvatarLana from './assets/avatar3.jpeg'
-import waitlistAvatarDemi from './assets/avatar4.jpeg'
-import waitlistAvatarCandice from './assets/avatar5.jpeg'
 
 
 const faqItems = [
@@ -296,22 +291,9 @@ export default function LandingPage() {
               </p>
             ) : null}
             <div className="lp-waitlist-social-proof">
-              <div className="lp-waitlist-avatars" data-node-id="696:9845">
-                {[
-                  waitlistAvatarOlivia,
-                  waitlistAvatarPhoenix,
-                  waitlistAvatarLana,
-                  waitlistAvatarDemi,
-                  waitlistAvatarCandice,
-                ].map((avatarSrc, index) => (
-                  <span className="lp-waitlist-avatar" key={avatarSrc} style={{ '--avatar-index': index } as CSSProperties}>
-                    <img src={avatarSrc} alt="" loading="lazy" />
-                  </span>
-                ))}
-              </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
   
-                Daugiau nei <strong>500+</strong> nuomotojų laukiančiųjų sąraše 
+                Daugiau nei <strong>200+</strong> nuomotojų laukiančiųjų sąraše 
               </p>
             </div>
          
@@ -612,21 +594,8 @@ export default function LandingPage() {
               </p>
             ) : null}
              <div className="lp-waitlist-social-proof">
-              <div className="lp-waitlist-avatars" data-node-id="696:9845">
-                {[
-                  waitlistAvatarOlivia,
-                  waitlistAvatarPhoenix,
-                  waitlistAvatarLana,
-                  waitlistAvatarDemi,
-                  waitlistAvatarCandice,
-                ].map((avatarSrc, index) => (
-                  <span className="lp-waitlist-avatar" key={avatarSrc} style={{ '--avatar-index': index } as CSSProperties}>
-                    <img src={avatarSrc} alt="" loading="lazy" />
-                  </span>
-                ))}
-              </div>
               <p className="lp-waitlist-caption" data-node-id="696:9855">
-              Daugiau nei 500+ nuomotojų laukiančiųjų sąraše
+              Daugiau nei 200+ nuomotojų laukiančiųjų sąraše
               </p>
             </div>
           </div>
