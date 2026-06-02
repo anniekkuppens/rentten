@@ -700,11 +700,11 @@ export default function LandingPage() {
               <p className="lp-contact-card-label">Ofisas</p>
               <a
                 className="lp-contact-card-link"
-                href="https://www.google.com/maps/search/?api=1&query=Gedimino%20pr.%201%2C%20LT-01103%20Vilnius%2C%20Lithuania"
+                href="https://maps.app.goo.gl/srwRfcvBnP5YVDb87"
                 target="_blank"
                 rel="noreferrer"
               >
-                Gedimino pr. 1, LT-01103 Vilnius, Lietuva
+               Lvivo g. 105A, Vilnius, 08104  
               </a>
             </div>
             <div className="lp-contact-card">
@@ -713,8 +713,8 @@ export default function LandingPage() {
                
               </div>
               <p className="lp-contact-card-label">Telefono nr.</p>
-              <a className="lp-contact-card-link" href="tel:+37060000000">
-                +370 600 00000
+              <a className="lp-contact-card-link" href="tel:+37063902060">
+              +370 639 02060
               </a>
             </div>
           </div>
