@@ -1,5 +1,3 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="14" fill="#101828"/>
-  <path d="M14 8L32 30H22L34 56L50 30H39L48 8H14Z" fill="#F7D046"/>
-  <path d="M20 8L36 28H28L38 48L46 34H36L44 8H20Z" fill="#7A5AF8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAC8UlEQVR4AeyazWsTQRjGJzn0YhHEW1HovYIXBVNBeqniWYlgKwh+0OpBUvBqiH9AczMieLIRDHr20EsvtopeBHvxoqD0Kkgv9mD6/JJM2A0b6Gwnm0w/mKfvzrs7O79n35lsDsmbhL9mszkp3ZPq0g/pnzSsxtwwwALTZAKyiRkR6bi0qAtXpBfSTYmBY4rDaswNAywwrcAojUeBukZ04rhOVKRn0kVpVBtsMFY6zC3OlhElcFdWZkkKpcFa7rB3l9Yt0XNCIagGM+wmL0esv7mg8OOwc3hgac0qz7pTCLLBPouRmSDx49AzGJmO54LsTWNkIkj0OPQERnjhxNPh9cYwEh52AvGRkYSHMtTU4a3I21N/jE/5KuPhrcj13yeMqxpXqqZ08q4h9o4dWkVOn71mklS888Qs196YjS+bvtic7uNtaWGg+rxhMMSxE4WHi1MbKS0Uza+v71pqvHxqSgvFLg5mup2MDlIbifIVzk2ZpcUbBkM2n3VV8nZi33Hj87c93fLho8emcOmyIe5pQJ+LvBqJwhfOn+kz5WDSqY181KcTy8eKfcFmt5gsN3ucRUxtBAPAW9G3wNG9YnODjqmN8MStopCYIB/NZXGc2sgFfVIBbWVho/vE5rKIqY1E4agAIhfdJ/SzkhcjwJb0HiEi9g3Riqrx8iTanO/ozQgVQQCy8RHHWcmbEYCjVanqCyS5rORshCWC+ErSC0lFOIcGuYx656XvbIRB/ZS/umlcVft+23w6VjXE3rH95knKezWSNEFWOa9G/r+fMj7l8hC8GnGZ2Pe1R0Z8P9H93u9AVWRnv09jAONdb7lDRbZcR43g9VsYWR9BMFekdYysuY4awevXMLIqsA9SqA321Xwul/spB3Up1FbHAxXBwCv9W5ZCazDD3v4Jhxxty0FF4oRCEA3WSoe9bQRsJf4q8sOaB4qsO4WRbLDBWO4wtyDt0mp1dGJbqqkzL92XXkvsoWG+NJkbBlhgmodRYhUJr912AQAA//+8BxkGAAAABklEQVQDAHJi0uLBDTj+AAAAAElFTkSuQmCC" width="50" height="50"/>
 </svg>
